@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Mohammad Waseem</title>
+  <meta name="description" content="Resume of Mohammad Waseem — Data Scientist & Machine Learning Engineer." />
+
+  <!-- ================= FONTS ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Shares the same stylesheet as the main portfolio (see §20 RESUME PAGE) -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="resume-body">
+
+  <!-- Minimal local icon sprite (Back arrow + Download) — kept separate from
+       the main sprite since this page can also be opened on its own. -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-back" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+  </svg>
+
+  <!-- =====================================================================
+       FLOATING TOOLBAR
+       ===================================================================== -->
+  <div class="resume-toolbar">
+    <a href="../index.html" class="btn btn-secondary btn-sm">
+      <svg class="icon"><use href="#icon-back"/></svg>
+      <span>Back to Portfolio</span>
+    </a>
+    <a href="resume.pdf" class="btn btn-ghost btn-sm" download>
+      <svg class="icon"><use href="#icon-download"/></svg>
+      <span>Download Resume</span>
+    </a>
+  </div>
+
+  <!-- =====================================================================
+       RESUME PREVIEW
+       ===================================================================== -->
+  <div class="resume-page-scaler">
+    <a href="resume.pdf" download class="resume-preview-link" aria-label="Download resume PDF">
+      <img class="resume-preview-image" src="resume.jpg" alt="Mohammad Waseem resume preview" />
+    </a>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
