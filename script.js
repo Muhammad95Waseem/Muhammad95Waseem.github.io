@@ -235,6 +235,34 @@
   })();
 
   /* ===================================================================
+     Internship Expand Interaction
+     -------------------------------------------------------------------
+     Lets the compact internship card expand to reveal the full details
+     using a smooth height transition and an accessible toggle button.
+     =================================================================== */
+  (function internshipCardExpand() {
+    var shell = document.getElementById("internshipCard");
+    var toggle = shell ? shell.querySelector(".experience-toggle") : null;
+    if (!shell || !toggle) return;
+
+    function updateState(expanded) {
+      shell.classList.toggle("is-expanded", expanded);
+      toggle.setAttribute("aria-expanded", String(expanded));
+      var label = toggle.querySelector(".toggle-label");
+      if (label) {
+        label.textContent = expanded ? "Hide details" : "Details";
+      }
+    }
+
+    toggle.addEventListener("click", function () {
+      var expanded = shell.classList.contains("is-expanded");
+      updateState(!expanded);
+    });
+
+    updateState(false);
+  })();
+
+  /* ===================================================================
      Scroll Reveal Animation
      -------------------------------------------------------------------
      Fades/slides in any element with the `.reveal` class as it enters
